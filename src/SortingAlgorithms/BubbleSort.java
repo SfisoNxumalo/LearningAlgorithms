@@ -1,3 +1,5 @@
+package SortingAlgorithms;
+
 import java.time.Duration;
 import java.time.Instant;
 import java.util.Arrays;
@@ -7,11 +9,11 @@ public class BubbleSort {
     public static void main(String[] args) {
         int inI = 0;
         int inJ = 0;
-        int NoOfSwap = 0;
+         int NoOfSwap = 0;
         int[] arr = {800, 20, 60, 9, 900, 1, 2, 3, 3, 77, 92, 22,90,2,87,6, 0};
 
         System.out.println("**********************************************************************");
-        System.out.println("Unsorted " + Arrays.toString(arr));
+        System.out.println("Bubble Sort O(n2)" + Arrays.toString(arr));
         System.out.println("**********************************************************************");
 
         for(int i = 1; i < arr.length; i++){
@@ -40,9 +42,9 @@ public class BubbleSort {
         NoOfSwap = 0;
 
         int[] arr2 = {800, 20, 60, 9, 900, 1, 2, 3, 3, 77, 92, 22,90,2,87,6,0};
-        for(int i = 0; i < arr2.length-1; i++){
+        for(int i = 1; i < arr2.length; i++){
                     inI++;
-                    for(int j = 0; j < arr2.length -1-i; j++){
+                    for(int j = 0; j < arr2.length-i; j++){
                         inJ++;
                         if(arr2[j] > arr2[j+1]){
                             int temp = arr2[j];
